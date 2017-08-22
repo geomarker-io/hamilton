@@ -1,3 +1,12 @@
+# TODO
+
+- implement example that uses multiple addresses
+	- don't require CB package to install
+	- show example using `CB::mappp` in the README
+	- also suggest alternatives
+	- convert README into Rmd file with additional examples
+- when ready, deprecate `geocodeCAGIS`
+
 # hamilton
 
 > Offline parcel-based geocoding for addresses in Hamilton County, Ohio, USA
@@ -19,7 +28,6 @@ Its major features include:
 2. Parcel-based Geocoding based on fuzzy text matching
     - fuzzy text matching
     - return CAGIS parcel id to link with hamilton county auditors database (need to use aud database)
-
 
 ## Installation
 

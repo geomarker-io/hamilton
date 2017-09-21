@@ -31,8 +31,10 @@ Geocode a single address string using `geocodeCAGIS()`. This will automatically 
 
 ``` r
 geocodeCAGIS('3333 Burnet Ave, Cincinnati, OH 45229')
-#>           lat          lon
-#> 1 39.14116934 -84.50238459
+#>                lat               lon    parcel_id score
+#> 1 39.1411685671102 -84.5023815212977 010400020052     1
+#>                  match
+#> 1 3333 burnet av 45229
 ```
 
 #### Address String Formatting
@@ -55,16 +57,20 @@ CB::mappp(addrs, geocodeCAGIS)
 #> 
 ...  :what (  0%)   [ ETA:  ?s | Elapsed:  0s ]
 ...  processing 1 of 3 ( 33%)   [ ETA:  0s | Elapsed:  0s ]
-...  processing 2 of 3 ( 67%)   [ ETA:  6s | Elapsed: 12s ]
-...  processing 3 of 3 (100%)   [ ETA:  0s | Elapsed: 16s ]
+...  processing 2 of 3 ( 67%)   [ ETA:  6s | Elapsed: 11s ]
+...  processing 3 of 3 (100%)   [ ETA:  0s | Elapsed: 15s ]
 #> warning: zip code does not begin with 450, 451, or 452; returning NA
 #> [[1]]
-#>           lat          lon
-#> 1 39.14116934 -84.50238459
+#>                lat               lon    parcel_id score
+#> 1 39.1411685671102 -84.5023815212977 010400020052     1
+#>                  match
+#> 1 3333 burnet av 45229
 #> 
 #> [[2]]
-#>           lat          lon
-#> 1 39.10809061 -84.51031529
+#>               lat               lon    parcel_id score
+#> 1 39.108091555583 -84.5103228803336 007500040247     0
+#>                      match
+#> 1 222 central pkwy 45202 e
 #> 
 #> [[3]]
 #> [1] NA

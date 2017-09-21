@@ -16,7 +16,7 @@ cache and parallel operation here}
 list of address parsing results with one address per element
 }
 \description{
-Note that this relies on python with the ...
+Note that this relies on python usaddress library. See the README for more details
 }
 \examples{
 parse_addresses(c('3333 Burnet Ave, Cincinnati, OH 45229', '737 US 50 Cincinnati OH 45150'))

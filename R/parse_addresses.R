@@ -1,6 +1,6 @@
 #' parse addresses into components
 #'
-#' Note that this relies on python with the ...
+#' Note that this relies on python usaddress library. See the README for more details
 #'
 #' @param X a list or vector of addresses
 #' @param ... additional arguments passed to \code{CB::mappp}; set options for

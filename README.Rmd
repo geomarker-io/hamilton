@@ -38,9 +38,9 @@ Its major functions include:
 
 Install the package by running the following in `R`:
 
-`remotes::install_github('cole-brokamp/geocodeCAGIS')`
+`remotes::install_github('cole-brokamp/hamilton')`
 
-The package relies on python to parse the address, which means that both `python` and the `usaddress` python library must be installed (`pip install usaddress`). Alternative installation methods are available depending on your operating system, seek instructions online.
+The package relies on python to parse the address, which means that both `python` and the `usaddress` python library must be installed (`pip install usaddress`). Alternative installation methods are available depending on your operating system; seek instructions online.
 
 ## Usage
 

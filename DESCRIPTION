@@ -13,9 +13,6 @@ RoxygenNote: 6.0.1
 Imports: 
     stringr,
     stringdist,
-    CB,
-    rPython,
-    magrittr
-Remotes: cole-brokamp/CB
+    reticulate,
 URL: https://github.com/cole-brokamp/hamilton
 BugReports: https://github.com/cole-brokamp/hamilton/issues

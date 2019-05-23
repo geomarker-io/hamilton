@@ -1,3 +1,3 @@
 .onAttach <- function(...) {
-  rPython::python.exec('import usaddress')
+  usaddress <- reticulate::import('usaddress')
 }

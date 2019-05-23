@@ -9,6 +9,12 @@
 #' @examples
 #' parse_address('3333 Burnet Ave, Cincinnati, OH 45229')
 parse_address <- function(address) {
+
+  if (! reticulate::py_module_available('usaddress')) {
+    stop('The usaddress python module is not available in the default Python installation\n',
+            'Install the usddress module in R by calling:\n    reticulate::py_install("usaddress")')
+  }
+
   address <- address %>%
   stringr::str_to_lower() %>% # make text lower case
   stringr::str_replace_all("[^[:alnum:]]", " ") %>% # remove non-alphanumeric symbols

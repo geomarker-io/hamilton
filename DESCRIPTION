@@ -1,7 +1,7 @@
 Package: hamilton
 Type: Package
 Title: Extract place-based information from addresses in Hamilton County, Ohio, USA
-Version: 0.1.0
+Version: 0.2.0
 Author: Cole Brokamp
 Maintainer: Cole Brokamp <cole.brokamp@gmail.com>
 Description: This package uses open data available from the Hamilton County Auditor 

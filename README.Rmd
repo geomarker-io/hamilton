@@ -22,14 +22,14 @@ This package is designed to geocode address strings using an offline copy of the
 
 Its major functions include:
 
-`parse_addresses()`
-  - parse an address string into individual components
-  - converts all letters to lower case
-  - replaces consecutive whitespace with one whitespace character
-  - removes non-alphanumeric characters
-  - takes a vector or list of address strings and returns a tibble of address components as columns along with their respective values
+- `parse_address()`
+    - parse an address string into individual components
+    - converts all letters to lower case
+    - replaces consecutive whitespace with one whitespace character
+    - removes non-alphanumeric characters
+    - takes an address string and returns a tibble of address components
 
-`geocodeCAGIS()`
+- `geocodeCAGIS()`
     - parcel-based geocoding based on included CAGIS address database
     - fuzzy text matching on street will return the best match and its similarity score
     - return CAGIS parcel id to link with other extant databases including Hamilton County Auditor

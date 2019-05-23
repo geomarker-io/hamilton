@@ -9,10 +9,12 @@ Description: This package uses open data available from the Hamilton County Audi
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 Imports: 
     stringr,
     stringdist,
+    magrittr,
     reticulate,
+    fuzzyjoin
 URL: https://github.com/cole-brokamp/hamilton
 BugReports: https://github.com/cole-brokamp/hamilton/issues

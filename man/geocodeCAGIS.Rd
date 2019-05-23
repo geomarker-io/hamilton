@@ -4,20 +4,16 @@
 \alias{geocodeCAGIS}
 \title{Geocode Cincinnati, OH area address using an offline and parcel-based method}
 \usage{
-geocodeCAGIS(addr_string, return.score = TRUE, return.call = FALSE,
-  return.match = TRUE)
+geocodeCAGIS(addr_string)
 }
 \arguments{
-\item{return.score}{logical, return method and matching score?}
-
-\item{return.call}{logical, return the original address string?}
-
-\item{return.match}{logical, return the best address text match from CAGIS?}
-
 \item{address_string}{a single string that will be geocoded}
 }
 \value{
-data.frame with lat/lon coords, CAGIS parcel id, and optionally method score, original call, or matched CAGIS record
+data.frame with lat/lon coords, CAGIS parcel id, matching score, and
+  matched CAGIS record (note that the `match` field returns only address
+  components from the CAGIS database that were used to match the supplied
+  address)
 }
 \description{
 Geocode an address using offline shapefile from CAGIS.
@@ -29,17 +25,18 @@ the score represents how many insertions/deletions/rearrangements were needed
 to match the input string to the address data.
 
 The \code{sysdata.rda} file comes bundled with the package. Alternatively,
-build the system data file on your own, using updated CAGIS files. See
-the vignette for details on this operation.
+build the system data file on your own, using updated CAGIS files. See the
+vignette for details on this operation.
 
-This function will return NA if the zip code of the address string
-does not begin with 450, 451, or 452.
+This function will return NA if the zip code of the address string does not
+begin with 450, 451, or 452.
 
-Requires a sufficient python binary and the usaddress module.
-See \link{addr_parse} for more details.
+Requires a sufficient python binary and the usaddress module. See
+\link{parse_address} for more details.
 }
 \examples{
-# geocodeCAGIS('3333 Burnet Ave, Cincinnati, OH 45229')
-# geocodeCAGIS('1456 Main St. 23566')
-# geocodeCAGIS('3131 Mary Jane Dr 45211')
+geocodeCAGIS('224 Woolper Ave, Cincinnati, OH 45220')
+geocodeCAGIS('3333 Burnet Ave, Cincinnati, OH 45229')
+geocodeCAGIS('1456 Main St. 23566')
+geocodeCAGIS('3131 Mary Jane Dr 45211')
 }
